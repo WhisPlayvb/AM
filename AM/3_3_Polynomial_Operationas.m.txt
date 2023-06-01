@@ -1,0 +1,51 @@
+%% 
+
+% Q1. Create a vector to represent the quadratic polynomial p(x) = x2-4x+4
+p=[1,-4,4]
+
+% Q2. Create a vector represents the polynomial p(x)=x5-3x2+2x+33 and
+% evaluate p at 2 using polyval
+p=[1,0,0,-3,2,33]
+x=2
+polyval(p,x)
+
+% Q3. Create matrix x=2,4,5,-1,0,3,7,1,5 evaluate p at x using polyvalm
+x=[2,4,5;-1,0,3;7,1,5]
+y=polyvalm(p,x)
+
+% Q4. Solve the equation 3x2-2x-4. Create a vector to represent a polynomial
+% then find the roots.
+p=[3,-2,-4]
+r=roots(p)
+
+% Q5.  Create a vector x with start value 0 and end value 100 with interval
+% 2pi and y=sinx
+x=0:2*pi:100
+y=sin(x)
+plot(x,y)
+title('Graph of sin(x)')
+xlabel('x')
+ylabel('sin(x)')
+
+
+%% 
+
+%p1=5x^3+4x^2+4
+%p2=9x^4+2x^2+6x+10
+
+p1=[5,4,0,2];
+p2=[9,0,2,6,10];
+
+v1=roots(p1);
+v2=roots(p2);
+
+s1=polyval(p2,[-5,1]);
+
+d1=polyder(p1);
+d2=polyder(p2);
+
+i1=polyint(p1);
+i2=polyint(p2);
+
+mul=conv(p1,p2);
+div=deconv(p2,p1);

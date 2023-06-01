@@ -1,0 +1,15 @@
+
+syms x y
+f(x,y)=sqrt(x+y)+1;
+x0 = 0;
+y0=1;
+h=0.1;
+xg=2;
+Y=y0;
+X=x0:h:xg;
+n=(xg-x0)/h;
+for i=1:n
+    Y(i+1)=Y(i)+h*f(X(i),Y(i));
+   
+end
+table(X',Y') 

@@ -1,0 +1,17 @@
+% simpsons 3/8rd rule
+x=1:1:7;
+y=[81 75 80 83 78 70 60]; 
+h=x(2)-x(1)
+m=length(x)
+A=0
+B=0
+for i=2:m-1
+    if rem(i-1,3)~=0
+        A=A+y(i);
+    else
+        B=B+y(i);
+    end
+end
+
+I=(h*3/8)*(y(1)+y(end)+3*A+2*B)
+

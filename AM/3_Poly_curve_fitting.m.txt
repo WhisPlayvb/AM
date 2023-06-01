@@ -1,0 +1,29 @@
+%polyfit(x,y,n)
+%fit(x',y','polyn')
+
+x=[0.9 1.5 3 4 6 8 9.5]
+y=[0.9 1.5 2.5 5.1 4.5 4.9 6.3]
+p=polyfit(x,y,3)
+q=fit(x',y','poly3')
+plot(x,y,"or")
+hold on 
+X=x(1):0.1:x(end);
+Y=polyval(p,X);
+Z=q(X);
+plot(X,Y,'--g')
+hold off
+
+%%
+x=0:0.5:5;
+y=[6 4.83 3.7 3.15 2.41 1.83 1.49 1.21 0.96 0.73 0.64];
+P=polyfit(x,log(y),1);
+b=P(1)
+a=exp(P(2));
+fprintf('y=%d e^(%f x)',a,b)
+
+X = x(1):0.1:x(end);
+Y = a.*exp(b.*X);
+plot(x,y,'sr',X,Y,'-.g')
+xlabel("X axis")
+ylabel("Y Axis")
+title("Exp Fun")

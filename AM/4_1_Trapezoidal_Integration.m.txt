@@ -1,0 +1,13 @@
+% int (f,x1,xm)  integration 
+% Trapezoidal
+x=0:1:4;
+y=[20 40 45 30 25];
+h=x(2)-x(1)
+m=length(x)
+A=0;
+for i=2:m-1
+    A=A+y(i)
+    
+end
+
+I=h/2*(y(1)+y(end)+2*A)

@@ -1,0 +1,26 @@
+clear
+clc
+close
+t=0:0.1:6*pi
+x=sqrt(t).*sin(2.*t)
+y=sqrt(t).*cos(2.*t)
+z=t./2
+plot3(x,y,z)
+xlabel("X axis")
+ylabel("Y Axis")
+zlabel("Z Axis")
+grid on
+
+%% 
+t=-10*pi:0.1:10*pi
+x=t.*cos(t)
+y=t.*sin(t)
+plot3(x,y,t)
+xlabel("X axis")
+ylabel("Y Axis")
+zlabel("Time")
+grid on
+
+
+
+
